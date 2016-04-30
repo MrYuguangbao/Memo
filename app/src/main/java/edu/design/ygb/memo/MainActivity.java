@@ -20,6 +20,8 @@ import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 import edu.design.ygb.memo.TextMemo.TextMemoActivity;
+import edu.design.ygb.memo.UI.AboutActivity;
+import edu.design.ygb.memo.UI.SettingActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,10 +30,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
         context=getApplicationContext();
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,17 @@ public class MainActivity extends AppCompatActivity
         ImageView itemIcon2 = new ImageView(this);
         itemIcon2.setImageDrawable(getResources().getDrawable(R.drawable.ic_menu_gallery));
         SubActionButton button2 = itemBuilder2.setContentView(itemIcon2).build();
+        button2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                startActivityForResult(intent, 1);
+            }
+        });
+
+
+
 
         SubActionButton.Builder itemBuilder3 = new SubActionButton.Builder(this);// 语音
         ImageView itemIcon3 = new ImageView(this);
@@ -116,11 +128,21 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(id)
+        {
+            case R.id.setting:
+                startActivity(new Intent(context,SettingActivity.class));
+                break;
+            case R.id.about:
+                startActivity(new Intent(context,AboutActivity.class));
+                break;
+            default:break;
         }
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }

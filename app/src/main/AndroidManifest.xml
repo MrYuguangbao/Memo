@@ -21,6 +21,14 @@
         <activity
             android:name=".TextMemo.TextMemoActivity"
             android:label="@string/title_activity_text_memo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.AboutActivity"
+            android:label="@string/title_activity_about"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

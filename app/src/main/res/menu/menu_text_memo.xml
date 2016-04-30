@@ -1,10 +1,45 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="edu.design.ygb.memo.TextMemo.TextMemoActivity">
+    tools:context="edu.design.ygb.memo.TextMemo.TextMemoActivity"
+    tools:text="@string/title"
+    >
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+        app:showAsAction="never">
+    </item>
+    <!-- <item
+         android:id="@+id/ab_search"
+         android:orderInCategory="100"
+         android:title="action_search"
+         app:actionViewClass="android.support.v7.widget.SearchView"
+         app:showAsAction="ifRoom"/>
+     <item
+         android:id="@+id/action_settings"
+         android:orderInCategory="100"
+         android:title="@string/action_settings"
+         app:showAsAction="never">
+     </item>
+      <item
+             android:id="@+id/action_share"
+             android:orderInCategory="80"
+             app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+             android:title="Title"
+             app:showAsAction="ifRoom"
+             >
+             <menu>
+                 <item
+                     android:id="@+id/wx"
+                     android:title="微信"
+                     android:icon="@drawable/ic_wx_logo"
+                     />
+                 <item
+                     android:id="@+id/xl"
+                     android:title="微博"
+                     android:icon="@drawable/ic_sina_logo"
+                     />
+             </menu>
+         </item> -->
 </menu>

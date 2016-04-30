@@ -17,7 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
+import edu.design.ygb.memo.MainActivity;
 import edu.design.ygb.memo.R;
 
 public class TextMemoActivity extends AppCompatActivity {
@@ -43,24 +45,28 @@ public class TextMemoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_text_memo);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("新建备忘录");
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
+//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.action_settings:
+//                        Toast.makeText(getApplicationContext(), "action_settings", Toast.LENGTH_SHORT).show();
+//                        break;
+//
+//                    default:
+//                        break;
+//                }
+//                return true;
+//            }
+//        });
 
     }
 
