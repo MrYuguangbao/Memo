@@ -21,7 +21,6 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             main_toolbar:navigationIcon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
             main_toolbar:title="备忘录"
-            main_toolbar:collapseIcon="@drawable/abc_ic_search_api_mtrl_alpha"
             />
 
     </android.support.design.widget.AppBarLayout>
