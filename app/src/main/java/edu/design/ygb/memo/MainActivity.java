@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,9 +18,9 @@ import android.widget.ImageView;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
-import edu.design.ygb.memo.TextMemo.TextMemoActivity;
-import edu.design.ygb.memo.UI.AboutActivity;
-import edu.design.ygb.memo.UI.SettingActivity;
+import edu.design.ygb.memo.textmemo.TextMemoActivity;
+import edu.design.ygb.memo.ui.AboutActivity;
+import edu.design.ygb.memo.ui.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -131,7 +130,7 @@ public class MainActivity extends AppCompatActivity
         switch(id)
         {
             case R.id.setting:
-                startActivity(new Intent(context,SettingActivity.class));
+                startActivity(new Intent(context,SettingsActivity.class));
                 break;
             case R.id.about:
                 startActivity(new Intent(context,AboutActivity.class));

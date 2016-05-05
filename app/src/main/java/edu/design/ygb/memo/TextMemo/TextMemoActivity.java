@@ -1,7 +1,5 @@
-package edu.design.ygb.memo.TextMemo;
+package edu.design.ygb.memo.textmemo;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -17,9 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
-import android.widget.Toast;
 
-import edu.design.ygb.memo.MainActivity;
 import edu.design.ygb.memo.R;
 
 public class TextMemoActivity extends AppCompatActivity {

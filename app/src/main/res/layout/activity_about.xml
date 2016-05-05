@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="edu.design.ygb.memo.TextMemo.TextMemoActivity">
+    tools:context="edu.design.ygb.memo.textmemo.TextMemoActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
